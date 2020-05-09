@@ -108,7 +108,7 @@ const replaceAllOccurrences = function(string, toBeReplaced, replaceWith) {
 const encode = function(string) {
     let replacementObject = { "a": "@", "s": "$", "i": "!", "o":"0" };
     for (let key in replacementObject) {
-        string = MessageMixer.replaceAllOccurrences(string, key, replacementObject[key]);
+        string = replaceAllOccurrences(string, key, replacementObject[key]);
     }
     return string;
 };
