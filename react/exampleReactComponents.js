@@ -33,13 +33,13 @@ class Owl extends React.Component {
         return (
             <div>
                 <h1>{owl.title}</h1>
-                <img src={owl.src} alt={owl.title} />
+                <img src={owl.src} alt={owl.title}/>
             </div>
         );
     }
 }
 
-ReactDOM.render(<Owl />, document.getElementById('app'));
+ReactDOM.render(<Owl/>, document.getElementById('app'));
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -67,13 +67,13 @@ class Friend extends React.Component {
         return (
             <div>
                 <h1>{friend.title}</h1>
-                <img src={friend.src} />
+                <img src={friend.src}/>
             </div>
         );
     }
 }
 
-ReactDOM.render(<Friend />, document.getElementById('app'));
+ReactDOM.render(<Friend/>, document.getElementById('app'));
 
 
 import React from 'react';
@@ -92,6 +92,37 @@ class TodaysPlan extends React.Component {
 }
 
 ReactDOM.render(
-    <TodaysPlan />,
+    <TodaysPlan/>,
     document.getElementById('app')
 );
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+class MyName extends React.Component {
+    // name property goes here:
+    get name() {
+        return "Slim Shady";
+    }
+
+    render() {
+        return <h1>My name is {this.name}.</h1>;
+    }
+}
+
+ReactDOM.render(<MyName/>, document.getElementById('app'));
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+class Button extends React.Component {
+    scream() {
+        alert('AAAAAAAAHHH!!!!!');
+    }
+
+    render() {
+        return <button onClick={this.scream}>AAAAAH!</button>;
+    }
+}
+
+ReactDOM.render(<Button/>, document.getElementById('app'));
